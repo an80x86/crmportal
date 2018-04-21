@@ -1,0 +1,51 @@
+{
+  "menus" : [
+    {
+      "id": 1,
+      "name": "Sosyal Medya İşlemleri",
+      "menu": [
+        {
+          "menuId": "10",
+          "name": "Crm Form İşlemleri",
+          "murl": "/crmform"
+        },
+        {
+          "menuId": "11",
+          "name": "Form İşlemleri",
+          "murl": "/form"
+        },
+        {
+          "menuId": "12",
+          "name": "Hedef Kitle",
+          "murl": "/hedef"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Yetkilendirme İşlemleri",
+      "menu": [
+        {
+          "menuId": "20",
+          "name": "Kullanıcı",
+          "murl": "/kullanici"
+        },
+        {
+          "menuId": "21",
+          "name": "Modül",
+          "murl": "/modul"
+        },
+        {
+          "menuId": "22",
+          "name": "Rol",
+          "murl": "/rol"
+        },
+        {
+          "menuId": "23",
+          "name": "Yetki",
+          "murl": "/yetki"
+        }
+      ]
+    }
+  ]
+}
