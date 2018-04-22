@@ -445,16 +445,35 @@ $.AdminBSB.browser = {
     }
 }
 //==========================================================================================================================
+function hazirla() {
+  $.AdminBSB.browser.activate();
+  $.AdminBSB.leftSideBar.activate();
+  $.AdminBSB.rightSideBar.activate();
+  $.AdminBSB.navbar.activate();
+  $.AdminBSB.dropdownMenu.activate();
+  $.AdminBSB.input.activate();
+  $.AdminBSB.select.activate();
+  $.AdminBSB.search.activate();
+
+  setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
+}
+
+var myVar = setInterval(function(){ myTimer() }, 1000);
+
+function myStopFunction() {
+    clearInterval(myVar);
+}
+
+function myTimer() {
+    document.getElementById('mastermenu')
+    var myElem = document.getElementById('mastermenu');
+    if (myElem !== null) {
+        hazirla();
+        console.log("kapandi.");
+        myStopFunction();
+    }
+}
 
 $(function () {
-    $.AdminBSB.browser.activate();
-    $.AdminBSB.leftSideBar.activate();
-    $.AdminBSB.rightSideBar.activate();
-    $.AdminBSB.navbar.activate();
-    $.AdminBSB.dropdownMenu.activate();
-    $.AdminBSB.input.activate();
-    $.AdminBSB.select.activate();
-    $.AdminBSB.search.activate();
-
-    setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
+    hazirla();
 });

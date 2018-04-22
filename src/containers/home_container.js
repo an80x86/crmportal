@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import { connect } from 'react-redux';
-import { artistListAll,artistList } from '../actions';
+import { artistListAll,artistList, menuListAll } from '../actions';
 import { bindActionCreators } from 'redux';
 
 import Search from '../components/search';
 import Artistlist from '../components/artistlist';
 
-import Loader from '../components/loader';
+//import Loader from '../components/loader';
 import Overlay from '../components/overlay';
 import Navbar from '../components/navbar';
 
@@ -17,6 +17,7 @@ import LeftSideBar from '../components/leftsidebar';
 class HomeContainer extends Component {
 
     componentWillMount() {
+        this.props.menuListAll()
         this.props.artistListAll()
     }
 
@@ -34,7 +35,7 @@ class HomeContainer extends Component {
                 <Overlay />
                 <Navbar />
                 <section>
-                  <LeftSideBar />
+                  <LeftSideBar menus={this.props.menus.menuList} />
                   <section className="content">
                     <div className="container-fluid">
 
@@ -52,13 +53,15 @@ class HomeContainer extends Component {
 
 
 function mapStateToProps(state){
+    //console.log(state.menus.menuList);
     return {
-        artists:state.artists
+        artists:state.artists,
+        menus:state.menus
     }
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({artistListAll,artistList},dispatch)
+    return bindActionCreators({artistListAll,artistList,menuListAll},dispatch)
 }
 
 

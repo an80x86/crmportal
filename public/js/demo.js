@@ -78,8 +78,8 @@ function activateNotificationAndTasksScroll() {
 }
 
 //Google Analiytics ======================================================================================
-addLoadEvent(loadTracking);
-var trackingId = 'UA-30038099-6';
+//addLoadEvent(loadTracking);
+//var trackingId = 'UA-30038099-6';
 
 function addLoadEvent(func) {
     var oldonload = window.onload;
