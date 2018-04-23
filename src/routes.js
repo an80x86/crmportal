@@ -12,6 +12,8 @@ import CrmForm from './components/crmform';
 import FormIsl from './components/formisl';
 import Hedef from './components/hedef';
 
+import NotFound from './components/notfound.js';
+
 
 const Routes = () => {
         return(
@@ -28,6 +30,8 @@ const Routes = () => {
                 <Route path="/hedef" exact component={Hedef}/>
 
                 <Route path="/artist/:id" exact component={Artist}/>
+
+                <Route path="*" component={NotFound}/>
             </Switch>
         )
 }
