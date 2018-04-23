@@ -14,7 +14,7 @@ import Navbar from '../components/navbar';
 
 import LeftSideBar from '../components/menu/leftsidebar';
 
-class HomeContainer extends Component {
+class YetkiContainer extends Component {
 
     componentWillMount() {
         this.props.menuListAll()
@@ -39,8 +39,7 @@ class HomeContainer extends Component {
                   <section className="content">
                     <div className="container-fluid">
 
-                      <Search keywords={this.getKeywords}/>
-                      <Artistlist artists={this.props.artists.artistList}/>
+                      <h1>Yetki İşlemleri</h1>
 
                     </div>
                   </section>
@@ -64,4 +63,4 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators({artistListAll,artistList,menuListAll},dispatch)
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(HomeContainer)
+export default connect(mapStateToProps,mapDispatchToProps)(YetkiContainer)

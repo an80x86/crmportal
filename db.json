@@ -173,6 +173,22 @@
             "murl": "/yetki"
           }
         ]
+      },
+      {
+        "id": 3,
+        "name": "Test İşlemleri",
+        "menu": [
+          {
+            "menuId": "31",
+            "name": "Ana Menu",
+            "murl": "/"
+          },
+          {
+            "menuId": "32",
+            "name": "Alt Menu",
+            "murl": "/artist/1"
+          }
+        ]
       }
     ]
 }
