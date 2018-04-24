@@ -17,7 +17,6 @@ import LeftSideBar from '../components/menu/leftsidebar';
 class ModulContainer extends Component {
 
     componentWillMount() {
-        this.props.menuListAll()
         this.props.artistListAll()
     }
 
