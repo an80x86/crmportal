@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import KullaniciContainer from '../containers/kullanici_container';
+const Kullanici = () => (
+  <div>
+    <h1>Kullanici!</h1>
+  </div>
+)
 
-const Kullanici = () =>{
-    return (
-        <div>
-            <KullaniciContainer/>
-        </div>
-    )
-}
-
-export default Kullanici;
+export default Kullanici

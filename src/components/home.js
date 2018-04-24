@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import HomeContainer from '../containers/home_container';
+const Home = () => (
+  <div>
+    <h1>Welcome to the Tornadoes Website!</h1>
+  </div>
+)
 
-const Home = () =>{
-    return (
-        <div>
-            <HomeContainer/>
-        </div>
-    )
-}
-
-export default Home;
+export default Home

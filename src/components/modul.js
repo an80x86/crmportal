@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import ModulContainer from '../containers/modul_container';
+const Modul = () => (
+  <div>
+    <h1>Modul!</h1>
+  </div>
+)
 
-const Modul = () =>{
-    return (
-        <div>
-            <ModulContainer/>
-        </div>
-    )
-}
-
-export default Modul;
+export default Modul

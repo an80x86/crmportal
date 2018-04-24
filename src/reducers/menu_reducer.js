@@ -1,4 +1,4 @@
-export default function(state={},action){
+export default function(state={menuList:[]},action){
 
     switch(action.type){
         case 'GET_MENUS_ALL':

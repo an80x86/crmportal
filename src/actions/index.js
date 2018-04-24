@@ -1,6 +1,5 @@
-import axios from 'axios';
-const URL = 'http://localhost:3004';
-
+import axios from 'axios'
+const URL = 'http://localhost:3004'
 
 export function artistList(keywords){
     const request = axios.get(`${URL}/artists?q=${keywords}`)
@@ -35,7 +34,6 @@ export function clearArtistDetail(){
         payload:null
     }
 }
-
 
 export function menuListAll(){
     const request = axios.get(`${URL}/menus`)

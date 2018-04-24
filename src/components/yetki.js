@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import YetkiContainer from '../containers/yetki_container';
+const Yetki = () => (
+  <div>
+    <h1>Yetki!</h1>
+  </div>
+)
 
-const Yetki = () =>{
-    return (
-        <div>
-            <YetkiContainer/>
-        </div>
-    )
-}
-
-export default Yetki;
+export default Yetki

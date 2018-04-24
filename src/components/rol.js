@@ -1,13 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import RolContainer from '../containers/rol_container';
+const Rol = () => (
+  <div>
+    <h1>Rol!</h1>
+  </div>
+)
 
-const Rol = () =>{
-    return (
-        <div>
-            <RolContainer/>
-        </div>
-    )
-}
-
-export default Rol;
+export default Rol

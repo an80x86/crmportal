@@ -4,7 +4,6 @@ import Bilgi from './bilgi';
 
 const MenuCiz = (props) => {
     if (props.menu === undefined) return ('');
-    console.log(props.menu);
 
     return (
       <div className="menu" id="mastermenu">
@@ -29,6 +28,7 @@ const MenuCiz = (props) => {
                     </ul>
                   </li>
                 )
+
               }
 
               <Bilgi />
