@@ -1,5 +1,5 @@
 import React from 'react'
-
+ 
 const Kullanici = () => (
   <div>
     <h1>Kullanici!</h1>
