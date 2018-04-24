@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import { connect } from 'react-redux';
-import { artistListAll,artistList, menuListAll } from '../actions';
+import { artistListAll,artistList } from '../actions';
 import { bindActionCreators } from 'redux';
 
 import Search from '../components/search';
@@ -31,19 +31,7 @@ class ModulContainer extends Component {
         //console.log(this.props);
         return (
             <div>
-
-                <Overlay />
-                <Navbar />
-                <section>
-                  <LeftSideBar menus={this.props.menus.menuList} />
-                  <section className="content">
-                    <div className="container-fluid">
-
-                      <h1>Modul İşlemleri</h1>
-
-                    </div>
-                  </section>
-                </section>
+              <h1>Modul İşlemleri</h1>
             </div>
         )
     }
@@ -54,13 +42,12 @@ class ModulContainer extends Component {
 function mapStateToProps(state){
     //console.log(state.menus.menuList);
     return {
-        artists:state.artists,
-        menus:state.menus
+        artists:state.artists
     }
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({artistListAll,artistList,menuListAll},dispatch)
+    return bindActionCreators({artistListAll,artistList},dispatch)
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(ModulContainer)

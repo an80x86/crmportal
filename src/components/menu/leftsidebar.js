@@ -5,22 +5,16 @@ import Footer from './footer';
 
 const LeftSideBar = (props) => {
 
-    if (props.menus === undefined) {
-      return '';
-    }
-    let menu = props;
+  let menu = props.menu;
 
-    return (
-      <aside id="leftsidebar" className="sidebar">
+  return (
+    <aside id="leftsidebar" className="sidebar">
+       <UserMenu namesurname={'Mustafa Bayer'} username={'mustafa'}/>
+        <MenuCiz menu={menu}/>
+        <Footer />
+    </aside>
+  )
 
-         <UserMenu namesurname={'Mustafa Bayer'} username={'mustafa'}/>
-
-          <MenuCiz menu={menu}/>
-
-          <Footer />
-
-      </aside>
-    )
 }
 
 export default LeftSideBar;

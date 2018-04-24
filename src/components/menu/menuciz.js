@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Bilgi from './bilgi';
 
 const MenuCiz = (props) => {
+    if (props.menu === undefined) return ('');
+    console.log(props.menu);
 
     return (
       <div className="menu" id="mastermenu">
@@ -10,7 +12,7 @@ const MenuCiz = (props) => {
               <li className="header">ANA MENÜ</li>
 
               {
-                props.menu.menus.map((ust) =>
+                props.menu.map((ust) =>
                   <li key={ust.id}>
                     <a href="javascript:void(0);" className="menu-toggle">
                         <i className="material-icons">widgets</i>

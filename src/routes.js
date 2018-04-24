@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from './components/home';
@@ -14,26 +14,67 @@ import Hedef from './components/hedef';
 
 import NotFound from './components/notfound.js';
 
+//import Loader from '../components/loader';
+import Overlay from './components/overlay';
+import Navbar from './components/navbar';
+import LeftSideBar from './components/menu/leftsidebar';
 
-const Routes = () => {
-        return(
-            <Switch>
-                <Route path="/" exact component={Home}/>
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { menuListAll } from './actions';
 
-                <Route path="/kullanici" exact component={Kullanici}/>
-                <Route path="/modul" exact component={Modul}/>
-                <Route path="/rol" exact component={Rol}/>
-                <Route path="/yetki" exact component={Yetki}/>
 
-                <Route path="/crmform" exact component={CrmForm}/>
-                <Route path="/form" exact component={FormIsl}/>
-                <Route path="/hedef" exact component={Hedef}/>
+class Routes extends Component {
+  componentWillMount() {
+      this.props.menuListAll()
+  }
 
-                <Route path="/artist/:id" exact component={Artist}/>
+  render() {
 
-                <Route path="*" component={NotFound}/>
-            </Switch>
-        )
+
+
+    return(
+        <div>
+          <Overlay />
+          <Navbar />
+          <section>
+            <LeftSideBar menu={this.props.menus.menuList}/>
+            <section className="content">
+              <div className="container-fluid">
+                <Switch>
+                    <Route path="/" exact component={Kullanici}/>
+
+                    <Route path="/kullanici" exact component={Kullanici}/>
+                    <Route path="/modul" exact component={Modul}/>
+                    <Route path="/rol" exact component={Rol}/>
+                    <Route path="/yetki" exact component={Yetki}/>
+
+                    <Route path="/crmform" exact component={CrmForm}/>
+                    <Route path="/form" exact component={FormIsl}/>
+                    <Route path="/hedef" exact component={Hedef}/>
+
+                    <Route path="/artist/:id" exact component={Artist}/>
+
+                    <Route path="*" component={NotFound}/>
+                </Switch>
+              </div>
+            </section>
+          </section>
+        </div>
+    )
+  }
 }
 
-export default Routes;
+function mapStateToProps(state){
+    //console.log(state.menus.menuList);
+    return {
+        menus:state.menus
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({menuListAll},dispatch)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Routes)
+//export default Routes;

@@ -8,12 +8,6 @@ import { bindActionCreators } from 'redux';
 import Search from '../components/search';
 import Artistlist from '../components/artistlist';
 
-//import Loader from '../components/loader';
-import Overlay from '../components/overlay';
-import Navbar from '../components/navbar';
-
-import LeftSideBar from '../components/menu/leftsidebar';
-
 class HomeContainer extends Component {
 
     componentWillMount() {
@@ -32,19 +26,9 @@ class HomeContainer extends Component {
         return (
             <div>
 
-                <Overlay />
-                <Navbar />
-                <section>
-                  <LeftSideBar menus={this.props.menus.menuList} />
-                  <section className="content">
-                    <div className="container-fluid">
+              <Search keywords={this.getKeywords}/>
+              <Artistlist artists={this.props.artists.artistList}/>
 
-                      <Search keywords={this.getKeywords}/>
-                      <Artistlist artists={this.props.artists.artistList}/>
-
-                    </div>
-                  </section>
-                </section>
             </div>
         )
     }
