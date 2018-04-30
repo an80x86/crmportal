@@ -43,3 +43,13 @@ export function menuListAll(){
         payload: request
     }
 }
+
+export function rolListAll(adim){
+    const myAdim = adim;
+    const request = axios.get(`${URL}/artists?_page=${myAdim}&_limit=5`)
+                    .then(response => response.data)
+    return {
+        type: 'GET_ARTISTS_ALL',
+        payload: request
+    }
+}

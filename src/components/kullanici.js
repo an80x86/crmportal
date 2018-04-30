@@ -19,9 +19,6 @@ class Kullanici extends Component {
         <ReactTable
           data={data}
           columns={[
-            {
-              //Header: "Name",
-              columns: [
                 {
                   Header: "First Name",
                   accessor: "firstName"
@@ -43,11 +40,8 @@ class Kullanici extends Component {
                   Header: "Visits",
                   accessor: "visits"
                 }
-              ]
-            },
-            
           ]}
-          defaultPageSize={5}
+          defaultPageSize={12}
           className="-striped -highlight"
         />
         <br />
