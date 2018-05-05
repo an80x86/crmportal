@@ -1,13 +1,13 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Home from './Home'
+import Home from './home'
 import Roster from './Roster'
 import Schedule from './Schedule'
 
-import Kullanici from './Kullanici'
-import Yetki from './Yetki'
-import Rol from './Rol'
-import Modul from './Modul'
+import Kullanici from './kullanici'
+import Yetki from './yetki'
+import Rol from './rol'
+import Modul from './modul'
 
 
 // The Main component renders one of the three provided
